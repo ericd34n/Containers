@@ -155,7 +155,7 @@ void SmallVector<T>::reallocate()
 {
     auto new_capacity = size() ? 2 * size() : 3;
     /**
-	 * Allocates raw, unconstructed meomory to hold n
+	 * Allocates raw, unconstructed memory to hold n
 	 * objects of type T.
 	 *
 	 * http://en.cppreference.com/w/cpp/memory/allocator/allocate
