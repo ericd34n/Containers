@@ -66,8 +66,8 @@ std::allocator<T> SmallVector<T>::alloc;
 template <typename T>
 std::pair<T*, T*> SmallVector<T>::alloc_then_copy(const T* begin, const T* end)
 {
-    /// allocate for range [e, b] storign in range is superfluous
-    /// in terms of functionality, however, it is __more__ explicit.
+    /// allocate for range [e, b], being explicit by
+    /// using `range`  
     auto range = end - begin;
     auto data = alloc.allocate(range);
 
