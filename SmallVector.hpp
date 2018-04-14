@@ -4,6 +4,8 @@
 #ifndef SMALLVECTOR_SMALLVECTOR_H
 #define SMALLVECTOR_SMALLVECTOR_H
 
+#include <iostream>
+
 template <typename T>
 class SmallVector {
 public:
