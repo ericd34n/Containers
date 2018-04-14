@@ -125,23 +125,23 @@ template <typename T>
 void SmallVector<T>::free()
 {
     /**
-	 * If there are elements to destroy, destroy
-	 * elements beginning from the first_free, or
-	 * in other words, the last successfully constructed
-	 * element that exists.
-	 */
+     * If there are elements to destroy, destroy
+     * elements beginning from the first_free, or
+     * in other words, the last successfully constructed
+     * element that exists.
+     */
     if (elements) {
         for (auto iter = first_free; iter != elements;) {
             alloc.destroy(--iter);
         }
         /**
-		 * http://en.cppreference.com/w/cpp/memory/allocator/deallocate
-		 * Deallocates the storage referenced by the pointer [elements],
-		 * which must be a pointer obtained by an earlier call
-		 * to allocate(). The argument [current_capacity - elements]
-		 * must be equal to the first argument of the call to allocate()
-		 * that originally produced p; otherwise, the behavior is undefined.
-		 */
+	 * http://en.cppreference.com/w/cpp/memory/allocator/deallocate
+	 * Deallocates the storage referenced by the pointer [elements],
+	 * which must be a pointer obtained by an earlier call
+	 * to allocate(). The argument [current_capacity - elements]
+	 * must be equal to the first argument of the call to allocate()
+	 * that originally produced p; otherwise, the behavior is undefined.
+	 */
         alloc.deallocate(elements, current_capacity - elements);
     }
 }
