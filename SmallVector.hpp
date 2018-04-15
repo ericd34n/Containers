@@ -30,7 +30,10 @@ public:
     void push_back(const T&);
     /// Move
     void push_back(T&&);
-
+	
+    T& operator[](std::size_t n) { return elements[n]; }
+    const T& operator[](std::size_t n) const { return elements[n]; }
+    
     std::size_t size() const { return first_free - elements; }
     std::size_t capacity() const { return current_capacity - first_free; }
     T* begin() const { return elements; }
