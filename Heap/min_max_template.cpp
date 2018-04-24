@@ -35,11 +35,11 @@ struct HeapBase {
     /// to handle allocation if the heap needs to grow
     std::vector<T> items;
     /**
-	 * sometimes it is helpful if indexes are signed integer values
-	 * I currently am unsure if I am going to write an algorithm where
-	 * a left index and right index may cross and either left or right
-	 * become negative, sometimes it can be a helpful loop invariant
-	 */
+     * sometimes it is helpful if indexes are signed integer values
+     * I currently am unsure if I am going to write an algorithm where
+     * a left index and right index may cross and either left or right
+     * become negative, sometimes it can be a helpful loop invariant
+     */
     /// size of the heap
     int size = 0;
     /// get integer index of left child
