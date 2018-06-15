@@ -11,7 +11,7 @@
  * Insert() - Worst Case - O(1)
  * Search() - Worst Case - O(1)
  *
- * A little C/C++ to implement CLRS data structures
+ * A little C & C++ to implementation of CLRS data structures
  * and algorithms as they are laid out in the text.
  *
  * This is not an exercise in best practices. This
